@@ -1,0 +1,243 @@
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;margin-right: 15px;">
+        <h2 style="color: brown;text-align: center;"><b><u>What is OOP in C#?</u></b></h2><br>
+        <div style="font-size: 125%">
+            <p>OOP stands for Object-Oriented Programming.Object-oriented programming (OOP) is the core ingredient of
+                the
+                .NET framework. OOP is so important that, before embarking on the road to .NET, you must understand its
+                basic principles and terminology to write even a simple program.Understanding OOP concepts can help make
+                decisions about how you should design an application and what language to use.</p>
+            <p>
+                C# offers full support for OOP including inheritance, encapsulation, abstraction, and polymorphism:
+            </p>
+            <p>Lets Discuss something about Oops :</p>
+            <h2><b><u>Class:</u></b></h2>
+            <p>
+                A class is like a blueprint of a specific object or we can say class is a collection of objects.
+                In the real world, every object has some color, shape, and functionalities - for example, the <b>Royal
+                    Enfield Bike</b>. Royal
+                Enfield is an object of the Bike type. The Bike is a class that
+                indicates some characteristics like speed, color, shape etc. So we can say that 'Bike' is a class,
+                and every single physical Bike of any Company is an object of the Bike class.
+            </p>
+            <b>Example :</b>
+            <div class="jumbotron">
+                <div>
+                    class Bike<br>
+                    {{ '{' }}<br>
+                    <span style="margin-left: 20px;"> string color = "blue";</span><br>
+                    {{ '}' }}<br>
+                </div>
+            </div>
+            <h2><b><u>Object:</u></b></h2>
+            <p>
+                In C#, Object is a real world entity In other words, object is an entity that has state and behavior.
+                Object is an instance of a class. All the members of the class can be accessed through object.
+            </p>
+            <b>Example :</b>
+            <div class="jumbotron">
+                Bike obj = new Bike();//Here obj is the object
+            </div>
+            <h2><b><u>Encapsulation</u></b></h2>
+            <p>
+                In c#, Encapsulation is a process of binding the data members and member functions into a single unit.
+                In c#, the class is the real-time example for encapsulation because it will combine various types of
+                data members and member functions into a single unit.
+            </p>
+            <b>Example : </b>
+            <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+                <code>
+                using System;
+                namespace ProgrammingWizard
+                {{ '{' }}
+                    class Encapsulation
+                    {{ '{' }}
+                        // Encapsulation Begin
+                        int x;
+
+                        //class constructor
+                        public Encapsulation(int temp)
+                        {{ '{' }}
+                            this.x = temp;
+                        {{ '}' }}
+
+                        //calculating the square
+                        public void MySquare()
+                        {{ '{' }}
+                            int square = x * x;
+                            Console.WriteLine(square);
+                        {{ '}' }}
+
+                        // End of Encapsulation
+
+                        //Entry point
+                        static void Main(string[] args)
+                        {{ '{' }}
+                            //instance created
+                            customer obj = new customer(20);
+
+                            obj. MySquare();
+
+                        {{ '}' }}
+
+                        {{ '}' }}
+                {{ '}' }}
+           
+                </code>
+            </pre>
+
+            <h2><b><u>Inheritance</u></b></h2>
+            <p>
+                Inheritance is the process by which one object acquires the properties of another object.In the language
+                of C#, a class that is inherited is called a base class. The class that performs the inheriting is
+                called a derived class. Therefore, a derived class is a specialized version of a base class. It inherits
+                all of the variables, methods, properties, operators, and indexers defined by the base class and adds
+                its own unique elements
+            </p>
+            <b>Example :</b>
+            <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+                <code>
+                    using System;
+                    public class Employee
+                    {{ '{' }}
+                        public float salary = 40000;
+                    {{ '}' }}
+                    public class Programmer: Employee
+                    {{ '{' }}
+                        public float bonus = 10000;
+                    {{ '}' }}
+                    class TestInheritance
+                    {{ '{' }}
+                        public static void Main(string[] args)
+                        {{ '{' }}
+                            Programmer p1 = new Programmer();
+                            Console.WriteLine("Salary: " + p1.salary);
+                            Console.WriteLine("Bonus: " + p1.bonus);
+        
+                        {{ '}' }}
+                    {{ '}' }}
+                  <b>Output :</b>
+                   
+                        <b>Salary: 40000</b>
+                        <b>Bonus: 10000</b>
+                   
+                </code>
+            </pre>
+            <h2><b><u>polymorphism</u></b></h2>
+            <p>
+                Polymorphism is a Greek word whose meaning is "one name many forms". Polymorphism is one of the core
+                concept of Object Oriented Programming that provides the ability
+                to a class to have multiple implementations with the same name.
+            </p>
+            <p>
+                There are two types of polymerphism are there let's discus about that
+            </p>
+            <h3><b>(1) Static polymerphism :-</b></h3>
+            <ul>
+                <li>Static polymerphism is also called as compile time polymerphism because the response to a method is
+                    determined at the time of compilation</li>
+                <li>
+                    C# provides two types of techniques to use static polymerphism
+                    They are:
+                </li>
+            </ul>
+            <p>(1)Method overloading</p>
+            <p>(2)Operator overloading</p>
+            <h3><u>Method overloading :-</u></h3>
+            <ul>
+                <li>Method overloading refers to have more than one method with same name but different parameters</li>
+                <li>
+                    in method overloading C# compiler checks the number of parameters passed and the type of the
+                    parameter and make the
+                    decision of which method to call, if no matching method is found this will throw an error.
+                </li>
+            </ul>
+            <p>Example :-</p>
+            <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+                <code>
+                    using System;
+                    public class Employee
+                    {{ '{' }}
+                        public void Print(int x)
+                        {{'{'}}
+                            Console.WriteLine(x);
+                        {{'}'}}
+                        public void Print(string name)
+                        {{'{'}}
+                            Console.WriteLine(name);
+                        {{'}'}}     
+                    {{ '}' }}
+                    public class Program
+                    {{'{'}}
+                        public static void Main(string[] args)
+                        {{'{'}}
+                            Employee empObject=new Employee();
+                            empObject.Print(10);
+                            empObject.Print("idleprogrammer.com");
+                        {{'}'}}
+                    {{'}'}}
+                  <b>Output :</b>
+                   
+                        <b>10</b>
+                        <b>idleprogrammer.com</b>
+                   
+                </code>
+            </pre>
+            <h3><b>(1) Dynamic polymerphism :-</b></h3>
+            <ul>
+                <li>
+                    Method overriding refers to have more than one method with same name and same parameter.
+                </li>
+                <li>
+                    Method overriding is implemented using inheritance, using method overriding it is possible for base
+                    class and derive class to have the same method name and the same parameter as discussed in first
+                    point.
+                </li>
+                <li>
+                    The compiler will decide which method to call at runtime and if no method is found then it throws an
+                    error.
+                </li>
+            </ul>
+            <p>Example :-</p>
+            <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+                <code>
+                    using System;
+                    public class Calculation
+                    {{'{'}}
+                        public void Print(int x)
+                        {{'{'}}
+                            x=x*x;
+                            Console.WriteLine( x );
+                        {{'}'}}
+                    {{'}'}}
+                    public class child:Calculation
+                    {{'{'}}
+                        public void Print(int x)
+                        {{'{'}}
+                            x=x*10;
+                            Console.WriteLine(x);
+                        {{'}'}}
+                    {{'}'}}
+                    public class Program
+                    {{'{'}}
+                        public static void Main(string[] args)
+                        {{'{'}}
+                            child empObject=new child();
+                            Calculation objectP=new Calculation();
+                            objectP.Print(10);
+                            empObject.Print(5);
+                        {{'}'}}
+                    {{'}'}}
+                
+                  <b>Output :</b>
+                   
+                        <b>100</b>
+                        <b>50</b>
+                   
+                </code>
+            </pre>
+
+        </div>
+
+    </div>
+</div>

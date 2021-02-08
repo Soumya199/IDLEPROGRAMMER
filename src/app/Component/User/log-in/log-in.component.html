@@ -1,0 +1,63 @@
+<!----------------------------------------- LogIn form started ------------------------------------>
+
+<div class="login-form">
+  <form #userLogInForm="ngForm" (ngSubmit)="LogInUser(userLogInForm)">
+    <h2 class="text-center">Sign in</h2>
+    <div class="form-group" style="width: 100%;">
+      <div class="form-group has-feedback">
+        <i class="glyphicon  form-control-feedback"><img src="https://img.icons8.com/dusk/25/000000/email.png" /></i>
+        <input ngModel #email="ngModel" type="email" placeholder="Email" class="form-control"
+          pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" required name="email">
+      </div>
+    </div>
+    <div class="form-group" style="width: 100%;">
+      <div class="form-group has-feedback">
+        <i class="glyphicon form-control-feedback"><img src="https://img.icons8.com/cute-clipart/25/000000/forgot-password.png"/></i>
+        <input ngModel #password="ngModel" type="password" class="form-control" placeholder="Password"
+          placeholder="password" required name="password">
+      </div>
+    </div>
+
+    <div class="form-group" style="width: 100%;">
+      <!-----------------------------------------------Email Validation ----------------------------------->
+      <div class="alert alert-danger" role="alert" *ngIf="email.touched  && !email.valid">
+        <span>Please Enter a valid Email</span>
+        <div *ngIf="email.errors.pattern">*Enter valid Email Id</div>
+      </div>
+      <!-----------------------------------------------Email Validation--------------------------------------->
+
+
+      <!-----------------------------------------Password Validation-------------------------------------------->
+      <div class="alert alert-danger" role="alert" *ngIf="password.touched  && !password.valid">
+        <div *ngIf="password.errors.required">
+          Password is required.
+        </div>
+        <!-- <div *ngIf="password.errors.minlength">
+            Password must be at least 8 characters long.
+          </div> -->
+      </div>
+      <!-----------------------------------------Password Validation-------------------------------------------->
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary login-btn btn-block" [disabled]="!userLogInForm.valid">Sign
+        in</button>
+    </div>
+    <div class="clearfix">
+      <a href="#" class="float-right" [routerLink]="['/AccountRecovery']">Forgot Password? </a>
+    </div>
+    <div class="or-seperator"><i>or</i></div>
+    <p class="text-center">Login with your social media account</p>
+    <div class="text-center social-btn">
+      <!-- <a class="btn btn-secondary" style="color: white;width: 50%;" (click)="FacebookLogIn()"><i
+            class="fa fa-facebook"></i>&nbsp;
+          Facebook</a> -->
+      <a class="btn btn-danger" style="width: 50%;" (click)="GoogleLogIn()"><i class="fa fa-google"></i>&nbsp;
+        <img src="https://img.icons8.com/color/30/000000/google-logo.png"/>Sign in</a>
+    </div>
+    <p class="text-center text-muted small" style="padding-top: 20px;">Don't have an account? <a
+        [routerLink]="['/register']">Sign up here!</a></p>
+  </form>
+</div>
+
+<!--------------------------------------------------------- LogIn form ended---------------------------- -->

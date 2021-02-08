@@ -1,0 +1,78 @@
+
+
+.mukesh{
+    overflow-y: scroll;
+  overflow-x: hidden;
+  }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /*All are for animation*/
+    .sign {
+      margin-top: 4px;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      /* width: 100%; */
+      min-width: 40%;
+      max-width: 60%;
+      height: 70px;
+      overflow: hidden;
+      letter-spacing: 2;
+      font-family: "Fantasy";
+      text-align: center;
+      font-size: 180%;
+      color: #25dbae;
+      text-shadow:  0 0 0.6rem #033f5a, 0 0 1.5rem #082402,
+      -0.2rem 0.1rem 1rem #7e2206, 0.2rem 0.1rem 1rem #7e0964,
+      0 -0.5rem 2rem #0d78db, 0 0.5rem 3rem #d4eb0d;
+      animation: shine 2s forwards, flicker 3s infinite;
+    }
+    
+    @keyframes blink {
+      5%,
+      15%,
+      20%,
+      50% {
+        color: #ffe6ff;
+        text-shadow:   0 0 0.6rem #7fc8eb, 0 0 1.5rem #4ae92a,
+        -0.2rem 0.1rem 1rem #e74f21, 0.2rem 0.1rem 1rem #e734b1,
+        0 -0.5rem 2rem #f3d113, 0 0.5rem 3rem #ff2483;
+      }
+      28%,
+      33% {
+        color: #c04cee;
+        text-shadow: none;
+      }
+      62%,
+      67% {
+        color: #e9ff24;
+        text-shadow: none;
+      }
+    }
+    
+    .flicker {
+      animation: shine 2s forwards, blink 3s 2s infinite;
+    }
+    
+    .fast-flicker {
+      animation: shine 2s forwards, blink 10s 1s infinite;
+    }
+    
+    @keyframes shine {
+      10% {
+        color: #6b1839;
+        text-shadow: none;
+      }
+      50% {
+        color: #ffe6ff;
+        text-shadow:  0 0 0.6rem  0 0 0.6rem #7fc8eb, 0 0 1.5rem #4ae92a,
+        -0.2rem 0.1rem 1rem #e74f21, 0.2rem 0.1rem 1rem #e734b1,
+        0 -0.5rem 2rem #f3d113, 0 0.5rem 3rem #ff2483;
+      }
+      
+    }
+    

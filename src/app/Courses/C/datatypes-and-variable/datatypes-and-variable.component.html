@@ -1,0 +1,244 @@
+<div style="margin-left: 15px;margin-left: 15px;font-size: 125%">
+    <h1 style="text-align: center;color: brown;"><b><u>Data Types And Variable In C</u></b></h1>
+    <h3><b>Hope you all are doing well ...</b></h3>
+    <p>
+        Let's first understad what actual meanning of variable and datatypes in C and after that we will see the actual
+        implementation
+    </p>
+    <h2><b><u>Variable</u></b></h2>
+    <ul>
+        <li>
+            A variable is nothing but just a name given to a storage area.
+        </li>
+        <li>
+            The value of the variable can be changed.
+        </li>
+        <li>
+            Each variable in C has its type which will tell that what type of variable it is..
+        </li>
+    </ul>
+    <b>For creating a variable in C there are certain rules are there please follow these rules while creating a
+        variable. </b><br><br>
+    <ol>
+        <li>
+            Each and every variable name should start with alphabets or underscore (_).
+        </li>
+        <li>
+            Spaces are allowed in variable declaration.
+        </li>
+        <li>
+            No other special symbols are allowed other than Except underscore (_) in the middle of the variable
+            declaration.
+        </li>
+        <li>
+            The variable name should not match any keyword.
+        </li>
+    </ol>
+    <b>Example : -</b>
+    <b>int </b> <span style="color: green;">x=10</span>;
+    <p>
+        Here <b>x</b> is a variable and <b>int</b> specify that x is an integer type variable and 10 is allocated to x.
+    </p>
+    <h2><b><u>Data Types</u></b></h2>
+    <ul>
+        <li>
+            As we discussed earlier each variable has a type and that will specify which type of value it will contain.
+        </li>
+        <li>
+            Each data type requires different amounts of memory.
+        </li>
+    </ul>
+    <p>Let's discuss some common data types</p>
+    <ul>
+        <li>
+            <b>int :</b> As I have already discussed, int is to specify that the variable is going to hold integer type
+            data.<br>Example: int y;
+        </li>
+        <li>
+            <b>char :</b> This data type specifies that the char type variable is going to store a single character
+            value.<br>
+            Example: char b='a';
+        </li>
+        <li>
+            <b>float :</b> A float variable can contain both the whole numbers and fractions<br>
+            Example: float f=1.7 --> if you will print <b>f</b> you will get 1.7
+        </li>
+    </ul>
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Storage size</th>
+                <th>Value range</th>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>1 byte</td>
+                <td>-128 to 127 or 0 to 255</td>
+            </tr>
+            <tr>
+                <td>unsigned char</td>
+                <td>1 byte</td>
+                <td>0 to 255</td>
+            </tr>
+            <tr>
+                <td>signed char</td>
+                <td>1 byte</td>
+                <td>-128 to 127</td>
+            </tr>
+            <tr>
+                <td>unsigned int</td>
+                <td>2 or 4 bytes</td>
+                <td>0 to 65,535 or 0 to 4,294,967,295</td>
+            </tr>
+            <tr>
+                <td>short</td>
+                <td>2 bytes</td>
+                <td>-32,768 to 32,767</td>
+            </tr>
+            <tr>
+                <td>unsigned short</td>
+                <td>2 bytes</td>
+                <td>0 to 65,535</td>
+            </tr>
+            <tr>
+                <td>long</td>
+                <td>8 bytes or (4bytes for 32 bit OS)</td>
+                <td>-9223372036854775808 to 9223372036854775807</td>
+            </tr>
+            <tr>
+                <td>unsigned long</td>
+                <td> 8 bytes</td>
+                <td>0 to 18446744073709551615</td>
+            </tr>
+        </table>
+    </div>
+    <h2><b><u>Format specifiers</u></b></h2>
+    <ul>
+        <li>
+            The format specifiers are used for input and output purposes.
+        </li>
+        <li>
+            By considering the format specifiers compiler get to know that what type of data is in a variable during
+            taking input using the scanf() function and printing using printf() function.
+        </li>
+    </ul>
+    <b>Formatspecifiers are listed below..</b>
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th>Format Specifier</th>
+                <th>Type</th>
+            </tr>
+            <tr>
+                <td>%c</td>
+                <td>Character</td>
+            </tr>
+            <tr>
+                <td>%d</td>
+                <td>Signed integer</td>
+            </tr>
+            <tr>
+                <td>%e or %E</td>
+                <td>Scientific notation of floats</td>
+            </tr>
+            <tr>
+                <td>%f</td>
+                <td>Float values</td>
+            </tr>
+            <tr>
+                <td>%g or %G</td>
+                <td>Similar as %e or %E</td>
+            </tr>
+            <tr>
+                <td>%hi</td>
+                <td>Signed integer (short)</td>
+            </tr>
+            <tr>
+                <td>%hu</td>
+                <td>Unsigned Integer (short)</td>
+            </tr>
+            <tr>
+                <td>%i</td>
+                <td>Unsigned integer</td>
+            </tr>
+            <tr>
+                <td>%l or %ld or %li</td>
+                <td>Long</td>
+            </tr>
+            <tr>
+                <td>%lf</td>
+                <td>Double</td>
+            </tr>
+            <tr>
+                <td>%Lf</td>
+                <td>Long double</td>
+            </tr>
+            <tr>
+                <td>%lu</td>
+                <td>Unsigned int or unsigned long</td>
+            </tr>
+            <tr>
+                <td>%lli or %lld</td>
+                <td>Long long</td>
+            </tr>
+            <tr>
+                <td>%llu</td>
+                <td>Unsigned long long</td>
+            </tr>
+            <tr>
+                <td>%o</td>
+                <td>Octal representation</td>
+            </tr>
+            <tr>
+                <td>%p</td>
+                <td>Pointer</td>
+            </tr>
+            <tr>
+                <td>%s</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>%u</td>
+                <td>Unsigned int</td>
+            </tr>
+            <tr>
+                <td>%x or %X</td>
+                <td>Hexadecimal representation</td>
+            </tr>
+            <tr>
+                <td>%n</td>
+                <td>Prints nothing</td>
+            </tr>
+            <tr>
+                <td>%%</td>
+                <td>Prints % character</td>
+            </tr>
+        </table>
+    </div><br><br>
+    <p style="color: brown;">
+        Let's write a C program for addition of two number by taking the input from the user.
+    </p><br><br>
+    <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+        <code>
+            #include&lt;stdio.h&gt;
+            void main()
+            {{'{'}}
+                int first_number;
+                int second_number;
+                int sum;
+                printf("Please enter first number for addition");
+                scanf("%d",&first_number);
+                printf("Please enter second number for addition");
+                scanf("%d",&second_number);
+                sum=first_number+second_number;
+                printf("Sum of two number is :%d",sum);
+            {{'}'}}
+        
+          <b>Output :</b>
+                <b>Please enter first number for addition 10</b>
+                <b>Please enter second number for addition 15</b>
+                <b>Sum of two number is :25</b>
+        </code>
+    </pre>
+</div>

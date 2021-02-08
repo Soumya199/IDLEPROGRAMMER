@@ -1,0 +1,154 @@
+
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;font-size: 125%;margin-right: 15px;">
+        <div>
+            <h2 style="text-align: center;color: brown;"><b><u>Data Types in c#</u></b></h2><br>
+            <p>
+                C# is a strongly-typed language. It means we must declare the type of a variable which indicates the kind of
+                values it is going to store such as integer, float, decimal, text, etc.
+            </p>
+            <div>
+                <div class="jumbotron" id="scrollmenu" style="width: auto;height: auto;">
+                    <h1 style="text-align: center;background-color: aqua;">System.Object</h1>
+                    <table class="table table-hover">
+                        <tr>
+                            <td scope="col">
+                                <h2><b>Value Type</b></h2><br>
+                                <ul>Simple Types
+                                    <li>bool, char </li>
+                                    <li>sbyte, short, int, long </li>
+                                    <li>
+                                        byte, ushort, uint, ulong </li>
+                                    <li>float, double, decimal </li>
+                                </ul>
+                                <ul>Enums</ul>
+                                <ul>Structs</ul>
+                            </td>
+                            <td scope="col">
+                                <h2><b>Reference Types</b></h2>
+                                <ul>
+                                    <li>Classes</li>
+                                    <li>Interfaces</li>
+                                    <li>Arrays </li>
+                                    <li>Delegates</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <h3 style="color: green;">Storage of Basic Types: </h3>
+            <table class="table table-hover">
+                <tr class="table-active">
+                    <td>
+                        Type
+                    </td>
+                    <td>Storage</td>
+                </tr>
+                <tr class="table-info" style="color: black;">
+                    <td>char,unsigned char,signed char</td>
+                    <td>2 bytes</td>
+                </tr>
+                <tr class="table-info" style="color: black;">
+                    <td>short, unsigned short</td>
+                    <td>2 bytes</td>
+                </tr>
+                <tr class="table-info" style="color: black;">
+                    <td>int, unsigned int</td>
+                    <td>4 bytes</td>
+                </tr>
+                <tr class="table-info" style="color: black;">
+                    <td>long, unsigned long</td>
+                    <td>8 bytes</td>
+                </tr>
+                <tr class="table-info" style="color: black;">
+                    <td>float</td>
+                    <td>4 bytes</td>
+                </tr>
+                <tr class="table-info" style="color: black;">
+                    <td>double</td>
+                    <td>8 bytes</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <div>
+                <p>
+                    In the managed world of the CLR(Common Language Runtime), there are two kinds of types – <b>Value Types and
+                        Reference Types</b>.
+                </p>
+                <h3>Value types: </h3>
+                <p>
+                    Value types are defined in C# by using the struct keyword. Instances of value types are the only kind of
+                    instances that can live on the stack. They live on the heap if they are members of reference types or if
+                    they are boxed, which will be discussed later.
+                </p>
+                <h3>Reference types: </h3>
+                <p>
+                    Reference types are defined in C# by using the class keyword. They are called reference types because the
+                    variables you use to manipulate them are actually references to objects on the managed heap. In fact, in the
+                    CLR reference-type variables are like value types that reference an object on the heap.
+                </p>
+            </div>
+            <div>
+                <h3><b>Comparison between Data Types in C#
+                    </b></h3>
+                <table class="table table-hover" >
+                    <tr class="table-active">
+                        <td>Value Types </td>
+                        <td>Reference Types</td>
+                    </tr>
+                    <tr class="table-info" style="color: black;">
+                        <td>
+                            The Variable contains the value directly
+                        </td>
+                        <td>
+                            The variable contains the refference to the data(data stored in separate memory area)
+                        </td>
+                    </tr >
+                    <tr class="table-info" style="color: black;">
+                        <td>
+                            Allocated on stack
+                        </td>
+                        <td>
+                            Allocated on heap using the new keyword
+                        </td>
+                    </tr>
+                    <tr class="table-info" style="color: black;">
+                        <td>
+                            Assigned as copies
+                        </td>
+                        <td>
+                            Assigned as references
+                        </td>
+                    </tr>
+                    <tr class="table-info" style="color: black;">
+                        <td>
+                            Default behavior is pass by value
+                        </td>
+                        <td>
+                            Passed by reference
+                        </td>
+                    </tr>
+                    <tr class="table-info" style="color: black;">
+                        <td>
+                            simple types, structs, enums
+                        </td>
+                        <td> classes
+                        </td>
+                    </tr>
+                    <tr class="table-info" style="color: black;">
+                        <td>
+                            == and != compare values
+                        </td>
+                        <td>
+                            == and != compare references not value
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        <button class="btn btn-success" style="float: left;" (click)="Previouspage()">Previous page</button>
+        <button class="btn btn-success" style="float: right;"(click)="Nextpage()">Next page</button>
+        </div>
+    </div>
+</div> 

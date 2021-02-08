@@ -1,0 +1,94 @@
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;margin-right: 15px;">
+        <script data-ad-client="ca-pub-5786926003605576" async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <h1 style="color: brown;text-align: center;"><b><u>Array in C#</u></b></h1><br>
+        <div style="font-size: 125%">
+            <p>
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <b>An array is a data structure that contains a number of variables called the elements of the array.
+                </b><br>
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-menu-right"
+                    style="margin-left: 15px;font-family: Arial, Helvetica, sans-serif;">
+                    All of the array elements must be of the same type, which is called the element type of the array.
+                </span>
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-menu-right"
+                    style="margin-left: 15px;font-family: Arial, Helvetica, sans-serif;">
+                    An array can be a single-dimensional array, a multidimensional array, or a jagged array (Array of
+                    Arrays).
+                </span>
+            </p>
+            <p>
+                <span class="glyphicon glyphicon-menu-right"
+                    style="margin-left: 15px;font-family: Arial, Helvetica, sans-serif;">
+                    Array types are reference type derived from the abstract base type System.Array.
+                </span>
+            </p>
+            <h3>Example</h3>
+            <div>
+                <img src="assets/Image/CSharp/array.png" width="100%" height="200px">
+            </div>
+            <h3>
+                <b>Single Dimensional Array</b>
+            </h3>
+            <p>
+                The one dimensional array or single dimensional array in C# is the simplest type of array that contains
+                only one row for storing data. It has single set of square bracket (“[]”).
+            </p>
+            <h4><b>Single Dimensional Arrays provides the following features:
+                </b>
+            </h4>
+            <p>
+                <span class="glyphicon glyphicon-hand-right"></span>
+                They declare a single-dimensional array of five integers.<br>
+                <span style="margin-left: 20px;"> Example: int[] array1 = new int[5];
+                </span> <br><br>
+                <span class="glyphicon glyphicon-hand-right"></span>
+                It is an array that stores string elements. <br>
+                <span style="margin-left: 20px;"> Example: string[] stringArray = new string[6];
+                </span> <br><br>
+                <span class="glyphicon glyphicon-hand-right"></span>
+                It declares and sets array element values. <br>
+                <span style="margin-left: 20px;"> Example: int[] array2 = new int[] {{ '{' }} 1, 3, 5, 7, 9 {{ '}' }};
+                </span> <br><br>
+                <span class="glyphicon glyphicon-hand-right"></span>
+                The alternative syntax is as follows:<br>
+                <span style="margin-left: 20px;">Example: int[] array3 = {{ '{' }} 1, 2, 3, 4, 5, 6 {{ '}' }};
+                </span> <br><br>
+            </p>
+            <h3><b>Multi-Dimensional Array</b></h3>
+            <p>
+                The multidimensional array is also known as rectangular arrays in C#. It can be two dimensional or three
+                dimensional. The data is stored in tabular form (row * column) which is also known as matrix.
+            </p>
+            <h4><b>Examples</b></h4>
+            <p>
+                <span class="glyphicon glyphicon-menu-right"></span>
+                Declare a two dimensional array<br>
+                <span style="margin-left: 20px;"> int[,] multiDimensionalArray1 = new int[2, 3];
+                </span> <br>
+                <span class="glyphicon glyphicon-menu-right"></span>
+                Declare and set array element values<br>
+                <span style="margin-left: 20px;"> int[,] multiDimensionalArray2 = {{ '{' }} {{ '{' }} 1, 2, 3 {{ '}' }},
+                    {{ '{' }} 4, 5, 6 {{ '}' }} {{ '}' }};
+                </span> <br>
+            </p>
+            <h3><b>Jagged Arrays
+                </b></h3>
+            <p>
+                Jagged array is a array of arrays such that member arrays can be of different sizes. In other words, the
+                length of each array index can differ. The elements of Jagged Array are reference types and initialized
+                to null by default.
+            </p>
+            <p>Following is a declaration of a single-dimensional array that has three elements, each of which is a
+                single-dimensional array of integers :</p>
+            <span style="margin-left: 20px;"><b>Example :</b>int[][] jaggedArray = new int[3][];</span>
+        </div>
+        <button class="btn btn-success" style="float: left;" (click)="Previouspage()">Previous page</button>
+        <button class="btn btn-success" style="float: right;" (click)="Nextpage()">Next page</button>
+    </div>
+</div>

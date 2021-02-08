@@ -1,0 +1,31 @@
+<div class="container" style="margin-top: 10px;">
+    <form #contactForm='ngForm' (ngSubmit)="onSubmit(contactForm)">
+        <label>Full Name</label>
+        <input type="text" name="fullName" ngModel #fullName="ngModel" placeholder="Your name.." required>
+        <!--            Full name Validation        -->
+        <div class="alert alert-danger" role="alert" *ngIf="fullName.touched  && !fullName.valid">
+            <span>Please Enter your name.</span>
+        </div>
+        <!--            Full Name Validation        -->
+
+        <label>Email</label>
+        <input type="text" ngModel #email="ngModel" name="email" placeholder="Your email.."
+            pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" required>
+        <!--            Email Validation        -->
+        <div class="alert alert-danger" role="alert" *ngIf="email.touched  && !email.valid">
+            <span>Please Enter a valid Email</span>
+            <div *ngIf="email.errors.pattern">*Enter valid Email Id</div>
+        </div>
+        <!--            Email Validation        -->
+
+        <label>Message</label>
+        <textarea name="message" ngModel #message="ngModel" placeholder="Write something.." style="height:200px"
+            required>
+        <div class="alert alert-danger" *ngIf="message.touched  && !message.valid">
+            Your Message is required to serve you
+        </div>
+    </textarea>
+
+        <input type="submit" class="btn btn-success" [disabled]="!contactForm.valid" value="submit">
+    </form>
+</div>

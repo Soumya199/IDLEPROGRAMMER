@@ -1,0 +1,149 @@
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;margin-bottom: 20px ;font-size: 125%">
+        <h2 style="text-align: center;color: brown;"><b><u>First C Program</u></b></h2>
+        <p>
+            Hope you all are waiting to write your first program using C Language so let's get started.....
+        </p>
+        <p>Let's first write a simple hello world program using C language and after that we will deep dive into that
+        </p>
+        <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+            <code>
+                #include&lt;stdio.h&gt;
+                int main()
+                {{'{'}}
+                    printf("Hello World!");
+                    return 0;
+                {{'}'}}
+            
+              <b>Output :</b>
+                    <b>Hello World!</b>
+            </code>
+        </pre>
+        <p><b>Congratulations!! You have created your first C program 🥳</b></p>
+        <p>Let's deep dive into it</p>
+        <ul>
+            <li>
+                As we can see the first line of our program is <b>#include&lt;stdio.h&gt; </b>which is a preprocessor
+                command
+                which tells the compiler to include <b>stdio.h</b> before going for the actual compilation process
+            </li>
+            <li>
+                The Second line of code contains <b>int main()</b>, main is a function from where the actual execution
+                starts, <b>"()"</b> symbol defines that main is a function, before main we have an <b>int</b> that
+                defines return type of method, that means the main method will return an integer type value. if you don't want
+                to return any value then simply use void instead of int.
+            </li>
+            <li>
+                The next line we have <b>printf()</b>, as we have discussed Printf() is a function which is used to
+                print
+                value in console and printf is a C function belonging to the ANSI C standard library, and included in
+                the file stdio.h.
+            </li>
+            <li>
+                The next line contains <b>return 0</b>, As I have already told you that <b>int main()</b> is going to
+                return
+                a value of integer type for that we are returning "0";
+            </li>
+        </ul>
+        <p><b>Hope till this point you are with me and able to get the core concept behind it</b></p>
+        <h2 style="color:brown;"><b><u>Tokens in C</u></b></h2>
+        <ul>
+            <li>
+                A C program consists of tokens and a token is either a keyword, an identifier, a constant, a string
+                literal, or a symbol. For example, the following C statement consists of five tokens −
+            </li>
+            <li>
+                The compiler first breaks the whole program into the smallest possible units (tokens) and proceeds to
+                the various stages of the compilation.
+            </li>
+        </ul>
+        <h2 style="color:brown;"><b><u>Keywords and Identifiers</u></b></h2>
+        <p>Keywords are known as a building block of a C program that meaning cannot be changed, There are total 32
+            keywords in C, and keywords are written in lowercase.</p>
+            <div style="overflow-x:auto;">
+                <table class="table table-striped ">
+                        <tr>
+                            <td>auto</td>
+                            <td>double</td>
+                            <td>int</td>
+                            <td>struct</td>
+                        </tr>
+                        <tr>
+                            <td>break</td>
+                            <td>else</td>
+                            <td>long</td>
+                            <td>switch</td>
+                        </tr>
+                        <tr>
+                            <td>case</td>
+                            <td>enum</td>
+                            <td>register</td>
+                            <td>typedef</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>extern</td>
+                            <td>return</td>
+                            <td>union</td>
+                        </tr>
+                        <tr>
+                            <td>const</td>
+                            <td>short</td>
+                            <td>float</td>
+                            <td>unsigned</td>
+                        </tr>
+                        <tr>
+                            <td>continue</td>
+                            <td>for</td>
+                            <td>signed</td>
+                            <td>void</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>extern</td>
+                            <td>return</td>
+                            <td>union</td>
+                        </tr>
+                        <tr>
+                            <td>default</td>
+                            <td>goto</td>
+                            <td>sizeof</td>
+                            <td>volatile</td>
+                        </tr>
+                        <tr>
+                            <td>do</td>
+                            <td>if</td>
+                            <td>static</td>
+                            <td>while</td>
+                        </tr>
+                </table>
+            </div>
+        
+        <p>An identifier is nothing but a name that is assigned to an element in a program. Example, name of a variable,
+            function, etc. As the name sounds, identifiers are used to identify a particular element in a program. Each
+            identifier must have a unique name. Following rules must be followed for identifiers:
+        </p>
+        <ul>
+            <li>
+                The first character must be an alphabet or an underscore.
+            </li>
+            <li>
+                It contains only letters, numbers, or underscore.
+            </li>
+            <li>
+                A keyword cannot be used as an identifier.
+            </li>
+            <li>
+                It should not contain any whitespace character.
+            </li>
+            <li>
+                The name must be meaningful.
+            </li>
+        </ul>
+
+
+    </div>
+
+    <button class="btn btn-success" style="float: left;" (click)="Previouspage()">Previous page</button>
+    <button class="btn btn-success" style="float: right;" (click)="Nextpage()">Next page</button>
+</div>

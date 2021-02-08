@@ -1,0 +1,13 @@
+.formating{
+	text-align: center;
+	color:cornflowerblue;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+#scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+  }

@@ -1,0 +1,32 @@
+.scrollbar {
+    height: auto;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.force-overflow {
+    min-height: 100px;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+.tab {
+    display: inline-block;
+    margin-left: 30px;
+}
+#container{
+	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+    /* background: rgba(255, 255, 255, 0.90); */
+    background:rgb(249, 253, 236);
+	border-radius: 5px;
+	height: auto;
+	width: 100%;
+	
+}
+/* .scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+  } */
+

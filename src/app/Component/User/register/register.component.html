@@ -1,0 +1,81 @@
+
+<div class="container">
+    <div class="row">
+        <div class="alert alert-{{alertType}}" role="alert" *ngIf="alert">
+          {{this.message}}
+        </div>
+    <div class="row">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title" style="text-align: center;">Registration Form</h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" #RegForm='ngForm' (ngSubmit)="CreateUser(RegForm)" role="form">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="form-group has-feedback">
+                                <i class="glyphicon glyphicon-user form-control-feedback"></i>
+                                <input ngModel #email="ngModel" type="email" placeholder="Email"
+                                    class="form-control" pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                    required name="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group has-feedback">
+                                <i class="glyphicon glyphicon-eye-close form-control-feedback"></i>
+                                <input ngModel #password="ngModel" type="password" class="form-control"
+                                    placeholder="password" required minlength="8" name="password" />
+                            </div>
+                        </div>
+                        <div class="col-12">
+
+                            <!--            Email Validation        -->
+                            <div class="alert alert-danger" role="alert" *ngIf="email.touched  && !email.valid">
+                                <span>Please Enter a valid Email</span>
+                                <div *ngIf="email.errors.pattern">*Enter valid Email Id</div>
+                            </div>
+                            <!--            Email Validation        -->
+
+
+                            <!--            Password Validation        -->
+                            <div class="alert alert-danger" role="alert" *ngIf="password.touched  && !password.valid">
+                                <div *ngIf="password.errors.required">
+                                    Password is required.
+                                </div>
+                                <div *ngIf="password.errors.minlength">
+                                    Password must be at least 8 characters long.
+                                </div>
+                            </div>
+                            <!--            Password Validation        -->
+
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" placeholder="{{this.num1}}" disabled>
+                          </div>
+                          <div class="form-group">
+                            <span style="margin-left: 50%;color: blue;">{{" + "}}</span>
+                          </div>
+                          <div class="form-group">
+                            <input class="form-control" placeholder="{{this.num2}}" disabled>
+                          </div>
+                          <div class="form-group">
+                            <span style="margin-left: 50%;color: blue;">{{" = "}}</span>
+                          </div>
+                          <div class="form-group">
+                            <input class="form-control" placeholder="Enter Sum" name="additionResult" required ngModel
+                              [(ngModel)]="addResult" #additionResult="ngModel">
+                            <div class="alert alert-danger" role="alert" *ngIf="additionResult.touched  && !additionResult.valid">
+                              <span class="help=bpx">Please Enter the addition value</span>
+                            </div>
+                          </div>
+
+                        <input class="btn btn-lg btn-success btn-block" type="submit" [disabled]="!RegForm.valid"value="Register">
+                        <!-- <input class="btn btn-lg btn-success btn-block" type="submit" value="Send varification Link" [disabled]="!logInForm.valid" (click)="SendingVarificationEmail(EmailId,addResult)" > -->
+			    	</fieldset>
+			      	</form>
+			</div>
+		</div>
+	</div>
+</div>

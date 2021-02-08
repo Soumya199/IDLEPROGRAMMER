@@ -1,0 +1,106 @@
+<div id="style-1" class="resize" style="margin-left: 5px;">
+    <div class="force-overflow" style="font-size: 125%">
+        <h1 style="color: chocolate;text-align: center;"><b>How to create a text file in memory using C#</b></h1>
+        <img src="https://gdurl.com/IWOZ" class="center" style="height: 150px;">
+        <p>Hi readers, hope you are doing good. Today in this article I will explain you how to create a text file in
+            memory using C# programing language because I got this question from 10-15 people. So let's get started....
+        </p>
+        <p>As we all know learning C# is simpler than other languages. C# provides the facility to create a text file in
+            memory and use it as per your requirement. For example Let's consider we have a console application. As we
+            all know if we use array or collections to store data that will be available for us till the program is in
+            running. But Csharp provide us a facility to hold the data in memory even after execution is finished. That
+            is known as <b>Serialization and Deserialization</b>
+        </p>
+        <p>
+            In a simple way we can say that Serialization is known as to write something to the file in memory and
+            Deserialization is known as to read data from the file. But actually in Serialization we are just saving an
+            object to the file and that will need a formatter to do all these so we are not going to discuss more about
+            Serialization and Deserialization now. You can find all about this in C# course section.<a
+                href="https://programingwizard.in/envirnmentsetup" target="_blank"><b>Click here</b>
+                for full C# coruse for free.</a>
+        </p>
+        <p>So let's begin the process to create a simple text file using C#</p>
+        <b>Steps</b>
+        <ul>
+            <li>Open your visual studio, In my case I have Visual studio 2019.</li>
+            <li>Click on create a new Project</li>
+            <li>In the search box search for console application, you can find a C# console application (.Net Framework)
+                click on that and then click Next</li>
+            <li>Give a name to your project and choose a location if you want and then click on <b>Create</b></li>
+            <li>import the namespace <b>using System.IO;</b></li>
+            <li>With the main method write the below code
+                <ul>
+                    <li>
+                        string path = @"D:\Tkss\Result.txt";
+                    </li>
+                    <li>Stream stream = File.Open(path, FileMode.OpenOrCreate);</li>
+                </ul>
+            </li>
+            <li>In the path just put your path where you want to have your txt file and the txt file name, This will
+                create a txt file in your memory </li>
+        </ul>
+        <p>
+            Let's discuss how this code creating a text file..
+        </p>
+        <p>
+            Here in the first line we have declared a path of string type, path is only going to hold the path where we
+            are
+            going to create a txt file along with the file name here i have "Result.tx"."Result" is the file name and
+            ".txt" is the file extension.
+        </p>
+        <p>
+            In the second line, we have declared Strem of Stream type. Basically Stream is a class and that is used to
+            read or write data to or from a file. The stream is defined in the System. Io package so we have to import
+            that to take benefit of it.
+            To know more about Stream just select Stream right click on it and click on go to defination. You can find
+            everything about that. We have File.Open is there this is writen because we are going to deal with file so
+            we have used File that is also a class and Open is a method. for more you can go to it's defination and
+            explore everything.As a parameter we have given path and the file mode , there are different file modes are
+            there that you can use but i have used "OpenOrCreate" because that is going to check the availbility of the
+            txt file if the file exist that will not create another one otherwise it will create a file with the name
+            that you have given.
+        </p><br>
+        <p style="color: blueviolet;">
+            Hope you guys enjoyed the article. Keep smiling and take care.
+        </p>
+
+        <!-- Card view start Here -->
+        <div class="cards-list">
+            <div class="card">
+                <a class="card-img-top" [routerLink]="['/whycsharp']" routerLinkActive="router-link-active">
+                    <img src="https://gdurl.com/BGN9" width="100%" height="100px">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Why C# is So Famous ?</h5>
+                    <p class="card-text">C# is a modern object-oriented programming language developed in 2000 by
+                        Anders
+                        Hejlsberg at Microsoft as a rival to Java......</p>
+                </div>
+            </div>
+            <div class="card">
+                <a class="card-img-top" [routerLink]="['/topprogrammingLanguage']"
+                    routerLinkActive="router-link-active">
+                    <img src="https://gdurl.com/UpDq" width="100%" height="100px">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Top 5 programinglanguages</h5>
+                    <p class="card-text">Each and every year the technology changes regularly. As we all are in the
+                        technical field, we should keep ourselves updated .......
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <a class="card-img-top" [routerLink]="['/ai']" routerLinkActive="router-link-active">
+                    <img src="https://gdurl.com/libV" width="100%" height="100px">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Why you should learn AI?</h5>
+                    <p class="card-text">Generally, we can define AI as a technology that makes a computer or
+                        computer-controlled robot .......</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card view End Here -->
+
+    </div>
+</div>

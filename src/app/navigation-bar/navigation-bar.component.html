@@ -1,0 +1,130 @@
+<mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{'dark-theme-mode':isDarkTheme}"
+  style="width: 100%;">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <!-- <mat-toolbar>Menu</mat-toolbar> -->
+
+
+    <!-------------------------- section dedicated only for profile picture and name -------------------------->
+    <div class="profile_info">
+      <img *ngIf="(ProfilePictureURL$ | async) as ProfilePictureSource" src="{{ProfilePictureSource}}"
+        class="profile_image" alt="">
+      <h4 style="margin-left:10px;" *ngIf="(UserName$ | async) as profileName">{{profileName | uppercase | slice:0:15}}
+      </h4>
+    </div>
+    <!--********************************************************************************************************-->
+
+
+    <mat-nav-list style="margin-left: 5px;">
+      <a mat-list-item title="Sign In" [routerLink]="[]" (click)="SignInRequested()"
+        *ngIf="!(LoginStatus$ | async) as LoginStatus"><img
+          src="https://img.icons8.com/cute-clipart/30/000000/login-rounded-down.png" /><span>Sign
+          In</span></a>
+
+
+      <a mat-list-item title="Sign In" [routerLink]="[]" (click)="signOut()"
+        *ngIf="(LoginStatus$ | async) as LoginStatus"><img
+          src="https://img.icons8.com/cute-clipart/30/000000/login-rounded-right.png" /><span> Sign
+          out</span></a>
+
+
+      <a mat-list-item [routerLink]="['/Home']" routerLinkActive="router-link-active">
+        <img src="https://img.icons8.com/fluent/25/000000/home.png" /><span>Home</span>
+      </a>
+
+      <a mat-list-item [matMenuTriggerFor]="course"><img
+          src="https://img.icons8.com/color/25/000000/courses.png" />Course</a>
+      <mat-menu #course="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="C"><img
+            src="https://img.icons8.com/color/25/000000/c-programming.png" />C Programing</button>
+        <button mat-menu-item [matMenuTriggerFor]="CSharp"><img
+            src="https://img.icons8.com/color/25/000000/c-sharp-logo.png" />C#</button>
+      </mat-menu>
+      <mat-menu #C="matMenu">
+        <button [routerLink]="['/C/intoductionToc']" mat-menu-item>Introduction to C</button>
+        <button [routerLink]="['C/envirnmentSetup']" mat-menu-item>Envirnment Setup</button>
+        <button [routerLink]="['C/FirstCprogram']" mat-menu-item>First C Program</button>
+        <button [routerLink]="['C/DatatypesAndVariable']" mat-menu-item>Datatypes & Variable</button>
+      </mat-menu>
+      <mat-menu #CSharp>
+        <button [routerLink]="['CSharp/envirnmentsetup']" mat-menu-item>Envirnment Setup</button>
+        <button [routerLink]="['CSharp/introductionCSharp']" mat-menu-item>Introduction to C#</button>
+        <button [routerLink]="['CSharp/datatypesInCsharp']" mat-menu-item>Datatypes in C#</button>
+        <button [routerLink]="['CSharp/nullable']" mat-menu-item>Boxing,Unboxing & Nullable</button>
+        <button [routerLink]="['CSharp/VarVsDynamic']" mat-menu-item>Var vs Dynamic</button>
+        <button [routerLink]="['CSharp/array']" mat-menu-item>Array in C#</button>
+        <button [routerLink]="['CSharp/oops']" mat-menu-item>Oops in C#</button>
+      </mat-menu>
+
+
+
+
+
+      <a mat-list-item [routerLink]="['/OnlineCompilers']" routerLinkActive="router-link-active"><img
+          src="https://img.icons8.com/nolan/25/google-code.png" />
+        Online Editor</a>
+
+
+      <a [routerLink]="['aboutUs']" mat-list-item>
+        <img src="https://img.icons8.com/fluent/25/000000/about.png" />About Us
+      </a>
+
+      <a [routerLink]="['/contactUs']" mat-list-item><img
+          src="https://img.icons8.com/fluent/25/000000/add-contact-to-company.png" />Contact us</a>
+
+
+      <!-- <a mat-list-item><span class="material-icons">
+          help
+        </span>Help</a> -->
+
+      <mat-slide-toggle [(ngModel)]="isDarkTheme" labelPosition="before" (change)="storeThemeSelection()"
+        style="margin-left: 13px;">
+        <span class="material-icons">
+          bedtime
+        </span>
+      </mat-slide-toggle>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!-- <span>programingwizard</span> -->
+
+      <!-- -------------------------------------Blinker starts from here ------------------------------------------->
+      <div style="font-size: 35px;overflow: hidden;">
+        <p class="navbar-text"
+          style="text-transform: uppercase;text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+          <b><span style="color: black;">idle</span><span style="color: rgb(210, 238, 53);">programmer</span></b></p>
+      </div>
+
+      <!--------------------------------------- Blinker ends here---------------------------------------------- -->
+
+    </mat-toolbar>
+
+
+    <!-------------------------------------------- Add Content Start ----------------------------------->
+
+    <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--------------------------------------------- Add Content End ------------------------------------>
+
+
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

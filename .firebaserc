@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "idleprogrammer-cce18": {
+      "hosting": {
+        "idleprogrammer": [
+          "idleprogrammer-cce18"
+        ]
+      }
+    }
+  }
+}

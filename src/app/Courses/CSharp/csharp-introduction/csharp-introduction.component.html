@@ -1,0 +1,142 @@
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;font-size: 125%;margin-right: 15px;">
+        <div>
+            <h1 class="formating">
+                Introduction To C#
+            </h1>
+            <hr style="width:50%;height:4px;border-width:0;color:rgb(13, 206, 132);background-color:rgb(190, 41, 123)">
+        </div>
+        <div>
+            <h2><b><u>What is C#?</u></b></h2>
+            <p>
+                <span class="glyphicon glyphicon-hand-right" style="padding-top: 5px;"></span> C# is pronounced
+                <b>"C-Sharp".</b>
+                <span class="glyphicon glyphicon-hand-right" style="padding-top: 5px;"></span> It is an object-oriented
+                programming language created by Microsoft that runs on the .NET Framework.<br>
+                <span class="glyphicon glyphicon-hand-right" style="padding-top: 5px;"></span> C# is often thought of as
+                a hybrid that takes the best of C and C++ to create a truly modernized language. Although the .NET
+                framework supports several other
+                coding languages, C# has quickly become one of the most popular.<br>
+                <span class="glyphicon glyphicon-hand-right" style="padding-top: 5px;"></span> C# can be used to create
+                almost anything but is particularly strong at building Windows desktop applications and games.<br>
+                <span class="glyphicon glyphicon-hand-right" style="padding-top: 5px;"></span> C# can also be used to
+                develop web applications and has become increasingly popular for mobile development too.<br>
+                <span class="glyphicon glyphicon-hand-right" style="padding-top: 5px;"></span> Cross-platform tools such
+                as Xamarin allow apps written in C# to be used on almost any mobile device.<br>
+            </p>
+        </div>
+        <div>
+            <h2><b><u>Why Use C#?</u></b></h2>
+            <div>
+                <ul>
+                    <li>
+                        <p>It is one of the most popular programming language in the world</p>
+                    </li>
+                    <li>
+                        <p>C# is an object oriented language which gives a clear structure to programs and allows code
+                            to be reused, lowering development costs.</p>
+                    </li>
+                    <li>
+                        <p>As C# is close to C, C++ and Java, it makes it easy for programmers to switch to C# or vice
+                            versa</p>
+                    </li>
+                    <li>
+                        <p>It has a huge community support</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3><b>Example:</b></h3>
+            <h4>A simple program to print <b>Hello World</b></h4>
+            <pre style="border-left: 3px solid #f2334c;">
+                <code>
+                    // C# program to print Hello World 
+                        using System; 
+                        namespace HelloWorldApp 
+                        {{ '{' }} 
+                        
+                            class HelloWorld 
+                            {{ '{' }} 
+                            
+                                // Main function 
+                                static void Main(string[] args)
+                                {{ '{' }} 
+
+                                // Printing Hello World 
+                                Console.WriteLine("Hello World"); 
+                                Console.ReadKey(); 
+                                {{ '}' }} 
+                           
+                            {{ '}' }} 
+                        
+                        {{ '}' }} 
+                </code>
+            </pre>
+        </div>
+        <h3><b>Output</b>:</h3><br>
+        <div class="jumbotron">
+            <p>Hello World</p>
+        </div>
+        <h3><b><u>How C# programing works?</u></b></h3>
+        <ul>
+            <li><b>using System; :</b>
+                <ul>
+                    <li>
+                        System is a namespace which contains the commonly used types. It is specified with a using
+                        System directive.
+                    </li>
+                </ul>
+            </li>
+            <li><b>namespace HelloWorldApp:</b>
+                <ul>
+                    <li>
+                        namespace is just a keyword that is used to define our namespace.HelloWorldApp is the
+                        user-defined name given to namespace.
+                    </li>
+                </ul>
+            </li>
+            <li><b>class HelloWorld :</b>
+                <ul>
+                    <li>
+                        Here class is just a keyword used to define a class. HelloWorld is the user defined name given
+                        to the class. Always keep one thing in mind that you should always start a class name with
+                        capital letter that is a good programing practice. Though in visual studio there is a
+                        predefined class will be there named as "Program", but if you want to change you can do that
+                    </li>
+                </ul>
+            </li>
+            <li><b>static void Main(string[] args) :</b>
+                <ul>
+                    <li>
+                        Here static keyword tells us that this method is accessible without instantiating the class.
+                        void keyword tells that this method will not return anything. Main() method is the entry point
+                        of our application. In our program, Main() method specifies its behavior with the statement
+                        Console.WriteLine(“Hello World!”);.
+                    </li>
+                </ul>
+            </li>
+            <li><b>Console.WriteLine("Hello World"); :</b>
+                <ul>
+                    <li>
+                        Here WriteLine() is a method of the Console class defined in the System namespace. WriteLine is
+                        used like print method in c that means it is used to show something in the screen. Another thing
+                        is if you like to import "using static System.Console;" you need not to write
+                        "Console.WriteLine()", you can simply use "WriteLine()" to show something in the screen.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Console.ReadKey():</b>
+                <ul>
+                    <li>
+                        This makes the program wait for a key press and prevents the screen from running and closing
+                        quickly. This is useful while coding in visual studio.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <button class="btn btn-success" style="float: left;" (click)="Previous()">Previous page</button>
+    <button class="btn btn-success" style="float: right;" (click)="Next()">Next page</button>
+</div>

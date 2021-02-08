@@ -1,0 +1,95 @@
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;font-size: 125%;">
+        <h1 style="color: brown;text-align: center;"><b><u>Var Vs Dynamic</u></b></h1>
+        <h3 style="color: brown;"><b>Use of Var in C#</b></h3>
+        <ul>
+            <li>
+                Var keyword was introduced in C# 3.0.
+            </li>
+            <li>
+                Var is a statically typed variable whose value is determined at
+                compile time, That means when you use var keywod in your program at compile time the type of that
+                variable
+                is autodetected. So as it's type is auto detected at compile time you must have to initialize it at the
+                time
+                of declaration otherwise it will give you a compile time error – “Implicitly-typed local variables must
+                be
+                initialized”.
+            </li>
+            <li>
+                It does not allow you to change the value from one type to another once it is declared.
+                for example we can say that if we have declared<b> var varInt=1</b> we will not be able to change it
+                like<b> varInt="ProgramingWizard"</b> ,if we do that that will show an error like this "Cannot
+                implicitly
+                convert type string to int"
+            </li>
+        </ul>
+        <p>
+            <b>Let's see an Example :</b>
+        </p>
+        <pre style="border-left: 3px solid #f2334c;">
+            <code>
+                using System;
+                namespace ProgramingWizard
+                {{ '{' }}
+                
+                    public class Program
+                    {{ '{' }} 
+                    
+                        public static void Main(string[] args)
+                        {{ '{' }}
+                        var varInt = 100;
+                        Console.WriteLine(varInt);
+                        {{ '}' }}
+                    {{ '}' }}
+                {{ '}' }}
+        
+            <b>Output : 100</b>
+            </code>
+        </pre>
+        <h3 style="color: brown;"><b>Use of Dynamic in C#</b></h3>
+        <ul>
+            <li>
+                Dynamic keywod was introduced in C# 4.0.
+            </li>
+            <li>
+                Dynamic is a dynamically typed variable whose value is determined
+                at run time, That means when you use dynamic keyword in your program at run time the type is
+                autodetected.
+                As it's type is detected at run time it does not require initialization at the time of declaration.
+            </li>
+            <li>
+                It is opposite to Var keyword. It allows you to change the variable type and not only it will compile
+                but also it will run with out giving any error.
+            </li>
+        </ul>
+        <b>Let's see an Example :</b>
+        <pre style="border-left: 3px solid #f2334c;">
+            <code>
+                using System;
+                namespace ProgramingWizard
+                {{ '{' }}
+                
+                    public class Program
+                    {{ '{' }}
+                    public static void Main(string[] args)
+                    
+                        {{ '{' }}
+                        dynamic intvalue=100;
+                        Console.WriteLine(intvalue);
+                        intvalue="programingWizard";
+                        Console.WriteLine(intvalue);
+                        {{ '}' }}
+                    {{ '}' }}
+                {{ '}' }}
+            <b>Output : 100</b>
+            <b>programingWizard</b>
+       
+            </code>
+        </pre>
+        <p>I have initialized the variable to show you how it works if you do not initialize it at the time of
+            declaration it will not give you any error.</p>
+    </div>
+    <button class="btn btn-success" style="float: left;" (click)="Previouspage()">Previous page</button>
+    <button class="btn btn-success" style="float: right;" (click)="Nextpage()">Next page</button>
+</div>

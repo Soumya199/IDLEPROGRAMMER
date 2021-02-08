@@ -1,0 +1,183 @@
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;font-size: 125%;">
+        <h2 style="color: brown;text-align: center;"><b>Convert Class in C#</b></h2>
+        <h3 style="color: brown;"><b>What is convert class?</b></h3>
+        <ul>
+            <li>
+                Convert class provides static methods to one base type to another base type.
+            </li>
+            <li>
+                The supported base data types such as Boolean, Char, SByte, Int16, Int32, Int64, UInt16, UInt32, UInt64,
+                Single, Double, Decimal, DateTime and String etc.
+            </li>
+        </ul>
+        <h4><b>Methods:</b></h4>
+        <div style="overflow-x:scroll;">
+            <table class="table table-striped" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th scope="col">Mehod Name</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">ChangeType()</th>
+                        <td> It returns an object of a specified type whose value is equivalent to a specified object.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">FromBase64CharArray(Char[], Int32, Int32)()</th>
+                        <td>Converts a subset of a Unicode character array, which encodes binary data as base-64 digits,
+                            to
+                            an equivalent 8-bit unsigned integer array. Parameters specify the subset in the input array
+                            and
+                            the number of elements to convert.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">FromBase64String(String)</th>
+                        <td>Converts the specified string, which encodes binary data as base-64 digits, to an equivalent
+                            8-bit unsigned integer array.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">GetTypeCode(Object)</th>
+                        <td>Returns the TypeCode for the specified object.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">IsDBNull(Object)</th>
+                        <td>Returns an indication whether the specified object is of type DBNull.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToBase64CharArray()</th>
+                        <td>Converts a subset of an 8-bit unsigned integer array to an equivalent subset of a Unicode
+                            character array encoded with base-64 digits.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToBase64String()</th>
+                        <td>Converts the value of an array of 8-bit unsigned integers to its equivalent string
+                            representation that is encoded with base-64 digits.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToBoolean()</th>
+                        <td>Converts a specified value to an equivalent Boolean value.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToByte()</th>
+                        <td>Converts a specified value to an 8-bit unsigned integer.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToChar()</th>
+                        <td>Converts a specified value to a Unicode character.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToDateTime()</th>
+                        <td>Converts a specified value to a DateTime value.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToDecimal()</th>
+                        <td>Converts a specified value to a decimal number.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToDouble()</th>
+                        <td>Converts a specified value to a double-precision floating-point number.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToInt16()</th>
+                        <td> Converts a specified value to a 16-bit signed integer.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToInt32()</th>
+                        <td>Converts a specified value to a 32-bit signed integer.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToInt64()</th>
+                        <td>Converts a specified value to a 64-bit signed integer.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToSByte()</th>
+                        <td>Converts a specified value to an 8-bit signed integer.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToSingle()</th>
+                        <td>Converts a specified value to a single-precision floating-point number.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToUInt16()</th>
+                        <td>Converts a specified value to a 16-bit unsigned integer.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToUInt32()</th>
+                        <td>Converts a specified value to a 32-bit unsigned integer.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">ToUInt64()</th>
+                        <td>Converts a specified value to a 64-bit unsigned integer.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>For more <a href="https://docs.microsoft.com/en-us/dotnet/api/system.convert?view=netcore-3.1"
+                    target="_blank">click here</a></p>
+        </div>
+        <h3 style="color: brown;"><b>Parse() :</b></h3>
+        <ul>
+            <li>
+                Parse() is used to convert a string into a primitive data type
+            </li>
+            <li>
+                Parse() method throws exception if the string cannot be converted to the specified type
+            </li>
+            <li>
+                Parse() method ignores white space at the beginning and at the end of the string, but all other
+                characters must be the characters that form the appropriate numeric type Any whitespace within the
+                characters that form the number cause an error
+            </li>
+            <li>
+                Syntax:
+                <ul>
+                    <li>Datatype var_name = Datatype.Parse(String); </li>
+                </ul>
+            </li>
+            <li>
+                Example:
+                <ul>
+                    <li>int number = int.Parse(“55”);
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3 style="color: brown;"><b>TryParse() :</b></h3>
+        <ul>
+            <li>
+                The job of Parse() and TryParse() is same it is also used to convert a string into a primitive data type
+            </li>
+            <li>
+                TryParse() method returns a Boolean to show whether the parsing worked or not.
+            </li>
+            <li>
+                TryParse() method ignores white space at the beginning and at the end of the string, but all other
+                characters must be the characters that form the appropriate numeric type Any whitespace within the
+                characters that form the number cause an error
+            </li>
+            <li>
+                The second keyword is used for the output variable, the ‘out’ keyword assigns the value to the variable
+            </li>
+            <li>
+                Syntax:
+                <ul>
+                    <li>
+                        bool var_name = Datatype.TryParse(String, out result); 
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Example:
+                <ul>
+                    <li> int year ;</li>
+                    <li>
+                        bool validYear = int.TryParse(“2020”, out year);
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

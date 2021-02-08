@@ -1,0 +1,362 @@
+/* Mostly: http://ryanfait.com/sticky-footer/ */
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+	margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+	height: 142px; 
+}
+.site-footer {
+  background: orange;
+}
+
+
+/* .mukesh{
+    overflow-y: scroll;
+  overflow-x: hidden;
+  } */
+  /*FOOTER*/
+  
+  footer {
+      background: #16222A;
+      background: -webkit-linear-gradient(59deg, rgb(59, 104, 79), rgb(112, 58, 96));
+      background: linear-gradient(59deg, rgb(85, 100, 57), rgb(100, 56, 75));
+      color: white;
+      margin-top:auto;
+      width: 100%;
+    }
+    
+    footer a {
+      color: #fff;
+      font-size: 14px;
+      transition-duration: 0.2s;
+    }
+    
+    footer a:hover {
+      color: #FA944B;
+      text-decoration: none;
+    }
+    
+    .copy {
+      font-size: 12px;
+      padding: 10px;
+      border-top: 1px solid #FFFFFF;
+    }
+    
+    .footer-middle {
+      padding-top: 2em;
+      color: white;
+    }
+    
+    
+    /*SOCİAL İCONS*/
+    
+    /* footer social icons */
+    
+    ul.social-network {
+      list-style: none;
+      display: inline;
+      margin-left: 0 !important;
+      padding: 0;
+    }
+    
+    ul.social-network li {
+      display: inline;
+      margin: 0 5px;
+    }
+    
+    
+    /* footer social icons */
+    
+    .social-network a.icoFacebook:hover {
+      background-color: #3B5998;
+    }
+    
+    .social-network a.icoLinkedin:hover {
+      background-color: #007bb7;
+    }
+    
+    .social-network a.icoFacebook:hover i,
+    .social-network a.icoLinkedin:hover i {
+      color: rgb(240, 191, 219);
+    }
+    
+    .social-network a.socialIcon:hover,
+    .socialHoverClass {
+      color: #1385a5;
+    }
+    
+    .social-circle li a {
+      display: inline-block;
+      position: relative;
+      margin: 0 auto 0 auto;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+    }
+    
+    .social-circle li i {
+      margin: 0;
+      line-height: 30px;
+      text-align: center;
+    }
+    
+    .social-circle li a:hover i,
+    .triggeredHover {
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -ms--transform: rotate(360deg);
+      transform: rotate(360deg);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+    
+    .social-circle i {
+      color: #595959;
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+      transition: all 0.8s;
+    }
+    
+    .social-network a {
+      background-color: #F9F9F9;
+    }
+    /* DEviding WebPage For Better Look */
+  
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create three unequal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 10px;
+    }
+    
+    .left{
+      width: 25%;
+    }
+    .middle {
+      width: 75%;
+  
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /*All are for animation*/
+    .sign {
+      margin-top: 4px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      letter-spacing: 2;
+      font-family: "Clip";
+      text-align: center;
+      font-size: 250%;
+      color: #ffe6ff;
+      text-shadow:  0 0 0.6rem #64a3c0, 0 0 1.5rem #8be479,
+      -0.2rem 0.1rem 1rem #d1d349, 0.2rem 0.1rem 1rem #db37b8,
+      0 -0.5rem 2rem #f3d113, 0 0.5rem 3rem #eb6cd6;
+      animation: shine 2s forwards, flicker 3s infinite;
+    }
+    
+    @keyframes blink {
+      0%,
+      22%,
+      36%,
+      75% {
+        color: #ffe6ff;
+        text-shadow:   0 0 0.6rem #6494aa, 0 0 1.5rem #90e77f,
+        -0.2rem 0.1rem 1rem #e2866b, 0.2rem 0.1rem 1rem #c25ca3,
+        0 -0.5rem 2rem #c5b456, 0 0.5rem 3rem #7c3655;
+      }
+      28%,
+      33% {
+        color: #c04cee;
+        text-shadow: none;
+      }
+      82%,
+      97% {
+        color: #e9ff24;
+        text-shadow: none;
+      }
+    }
+    
+    .flicker {
+      animation: shine 2s forwards, blink 3s 2s infinite;
+    }
+    
+    .fast-flicker {
+      animation: shine 2s forwards, blink 10s 1s infinite;
+    }
+    
+    @keyframes shine {
+      0% {
+        color: #6b1839;
+        text-shadow: none;
+      }
+      100% {
+        color: #ffe6ff;
+        text-shadow:  0 0 0.6rem  0 0 0.6rem #2d6b88, 0 0 1.5rem #4f9e3f,
+        -0.2rem 0.1rem 1rem #9b4c34, 0.2rem 0.1rem 1rem #9c2d7b,
+        0 -0.5rem 2rem #d1ba37, 0 0.5rem 3rem #cc3275;
+      }
+      
+    }
+    
+    @keyframes flicker {
+      from {
+        opacity: 1;
+      }
+    
+      4% {
+        opacity: 0.9;
+      }
+    
+      6% {
+        opacity: 0.85;
+      }
+    
+      8% {
+        opacity: 0.95;
+      }
+    
+      0% {
+        opacity: 0.9;
+      }
+    
+      1% {
+        opacity: 0.922;
+      }
+    
+      2% {
+        opacity: 0.9;
+      }
+    
+      4% {
+        opacity: 0.95;
+      }
+    
+      6% {
+        opacity: 0.98;
+      }
+    
+      7% {
+        opacity: 0.9;
+      }
+    
+      9% {
+        opacity: 0.93;
+      }
+    
+      10% {
+        opacity: 0.99;
+      }
+    
+      14% {
+        opacity: 1;
+      }
+    
+      16% {
+        opacity: 0.94;
+      }
+    
+      18% {
+        opacity: 0.98;
+      }
+    
+      17% {
+        opacity: 0.93;
+      }
+    
+      18% {
+        opacity: 0.5;
+      }
+    
+      19% {
+        opacity: 0.96;
+      }
+    
+      22% {
+        opacity: 1;
+      }
+    
+      24% {
+        opacity: 0.97;
+      }
+    
+      26% {
+        opacity: 0.94;
+      }
+    
+      36% {
+        opacity: 0.9;
+      }
+    
+      38% {
+        opacity: 0.9;
+      }
+    
+      50% {
+        opacity: 0.99;
+      }
+    
+      58% {
+        opacity: 1;
+      }
+    
+      50% {
+        opacity: 0.9;
+      }
+    
+      42% {
+        opacity: 0.95;
+      }
+    
+      63% {
+        opacity: 0.93;
+      }
+    
+      65% {
+        opacity: 0.95;
+      }
+    
+      77% {
+        opacity: 0.93;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+    
+    

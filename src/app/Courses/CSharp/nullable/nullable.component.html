@@ -1,0 +1,52 @@
+<div id="style-1" class="resize">
+    <div class="force-overflow" style="margin-left: 15px;font-size: 125%;">
+        <h2 style="color: brown;text-align: center;"><b><u>Concept of Boxing,Unboxing and Nullable types in C#</u></b></h2>
+        <h3 style="color: brown;"><b>Boxing</b></h3>
+        <p>Boxing is known as the process of converting a value type to the type object. When the common language
+            runtime (CLR) boxes a value type, it wraps the value inside a
+            System.Object instance and stores it on the managed heap. Boxing is an implicit conversion.
+        </p>
+        <b>Example</b>
+        <p>
+            int p=4000;<br>
+            object obj=p;
+        </p>
+        <p>
+            Now both the integer variable and the object variable exist on the stack. However, the value of the object
+            resides on the heap.
+        </p>
+        <h3 style="color: brown;"><b>Unboxing</b></h3>
+        <p>
+            Unboxing is an explicit conversion from the object type to a value type .
+        </p>
+        <b>Example</b>
+        <p>
+            int p=4000;<br>
+            object obj=p;<br>
+            int w=(int)obj;<br>
+        </p>
+        <h3 style="color: brown;"><b>Nullable type in C#</b></h3>
+        <p>
+            Nullable types represent value-type variables that can be assigned the value of null. Using nullable we
+            can make a variable to hold null value. When ever we are talking about Nullable one question arises why
+            we need a nullable type?. The answer is quite simple, nullable will help us at the time of dealing with
+            database.You cannot create a nullable type based on a reference type because reference types already support
+            the
+            null value.
+        </p>
+        <b>Example :</b>
+        <p>
+            int ? program=null;
+        </p>
+        <p>
+            Here <b>"?"</b> Symbol is used to make program variable of integer type to hold null value. If you write
+            like this<br>
+            int program=null;<br>
+            That will give you an error like this "Cannot convert null to 'int' because it is a non-nullable value
+            type".
+
+        </p>
+    </div>
+    <button class="btn btn-success" style="float: left;" (click)="Previouspage()">Previous page</button>
+    <button class="btn btn-success" style="float: right;" (click)="Nextpage()">Next page</button>
+</div>
