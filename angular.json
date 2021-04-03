@@ -36,7 +36,7 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/hcbjC.js"
+              "src/assets/js/html.js"
             ]
           },
           "configurations": {
@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "idleprogrammer"
+  "defaultProject": "idleprogrammer",
+  "cli": {
+    "analytics": false
+  }
 }

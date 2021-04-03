@@ -1,0 +1,665 @@
+<div class="idledefault">
+    <h1 style="text-align: center;color: brown;"><b><u>Operators in C#</u></b></h1>
+    <ul>
+        <li>
+            Operators are the symbols that have special meaning and used to perform specific mathematical or logical
+            manipulations.
+        </li>
+        <li>
+            Operators are used to perform some operations on variables and values like addition, subtraction,
+            multiplication, etc.
+        </li>
+        <b>Example:</b> <br>
+        <b>a + b</b>
+        <li>In this example + is considered as operator and both a & b are called operands.</li>
+    </ul>
+    <b>
+        There are different Operators are there let's discuss some of that.
+    </b>
+    <ol>
+        <li>
+            Arithmetic Operators
+        </li>
+        <li>
+            Relational Operators
+        </li>
+        <li>
+            Logical Operators
+        </li>
+        <li>
+            Bitwise Operators
+        </li>
+        <li>
+            Assignment Operators
+        </li>
+    </ol>
+    <b><u>Arithmetic Operators</u></b>
+    <ul>
+        <li>
+            Arithmetic operators are used to perform mathematical operations.
+        </li>
+    </ul>
+
+    <div style="overflow-x:auto;">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Operator Name</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>+</td>
+                    <td>Addition Operator</td>
+                    <td>a + b</td>
+                    <td>This operator is used to add two values</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction Operator</td>
+                    <td>a - b</td>
+                    <td>This operator is used to subtraction one value from another</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication Operator</td>
+                    <td>a * b</td>
+                    <td>This operator is used to multiply two values</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Division Operator</td>
+                    <td>a / b</td>
+                    <td>This operator is used to divide one value by other</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulus Operator</td>
+                    <td>a / b</td>
+                    <td>This operator is used to return the division remainder</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+    <b>Example :-</b>
+    <pre style="border-left: 3px solid #def55f;overflow-x: scroll;">
+        <code>
+            using System;
+            class IdleProgrammer
+            {{'{'}}
+                static void Main() 
+                {{'{'}}
+                    int a=10;
+                    int b=5;
+                    int c;
+                    c=a+b;
+                    Console.WriteLine("Addition of a and b is :"+c);
+                    c=a-b;
+                    Console.WriteLine("Subtraction of a and b is :"+c);
+                    c=a*b;
+                    Console.WriteLine("Multiplication of a and b is :"+c);
+                    c=a/b;
+                    Console.WriteLine("Division of a by b is :"+c);
+                    c=a%b;
+                    Console.WriteLine("Division remainder a by b is :"+c);
+                {{'}'}}
+            {{'}'}}
+
+            <b>Output:</b>
+                Subtraction of a and b is :5                                                                                                           
+                Multiplication of a and b is :50                                                                                                       
+                Division of a by b is :2                                                                                                               
+                Division remainder a by b is :0 
+        </code>
+    </pre>
+    <h2><b><u>Relational Operators</u></b></h2>
+    <ul>
+        <li>
+            Relational operators are used to check the relation between two operands and this always returns a boolean
+            value (true/false).
+        </li>
+    </ul>
+    <div style="overflow-x:auto;">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Operator Name</th>
+                    <th>Example(x=10,y=5)</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        ==
+                    </td>
+                    <td>
+                        Equal to
+                    </td>
+                    <td>
+                        x == y returns false
+                    </td>
+                    <td>
+                        This operator is used to compare two values.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        >
+                    </td>
+                    <td>
+                        Greater than
+                    </td>
+                    <td>
+                        x > y returns true
+                    </td>
+                    <td>
+                        This operator checks whether left operand greater than the right operand or not and returns true if
+                        it is
+                        satisfied.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        < </td>
+                    <td>
+                        Less than
+                    </td>
+                    <td>
+                        x < y returns false </td>
+                    <td>
+                        This operator checks whether left operand less than right operand or not and return true if it is
+                        satisfied.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        >=
+                    </td>
+                    <td>
+                        Greater than or Equal to
+                    </td>
+                    <td>
+                        x >= y returns true
+                    </td>
+                    <td>
+                        This operator checks whether left operand greater than or equal to right operand or not and return
+                        true if it is satisfied.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <= </td>
+                    <td>
+                        Less than or Equal to
+                    </td>
+                    <td>
+                        x >= y returns false
+                    </td>
+                    <td>
+                        This operator checks It compares whether left operand less than or equal to right operand or not and
+                        return true if it is satisfied.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        !=
+                    </td>
+                    <td>
+                        Not Equal to
+                    </td>
+                    <td>
+                        x != y returns false
+                    </td>
+                    <td>
+                        This operator checks wheather two operands are equal or not equal if not equal it will return true.
+                    </td>
+                </tr>
+    
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+    
+    <b>
+        Example :-
+    </b>
+    <pre style="border-left: 3px solid #def55f;overflow-x: scroll;">
+        <code>
+            using System;
+
+            namespace IdleProgrammer
+            {{'{'}}
+                class Program
+                {{'{'}}
+                    static void Main(string[] args)
+                    {{'{'}}
+                        bool result;
+                        int x = 10, y = 5;
+                        result = (x == y);
+                        Console.WriteLine("is x equals y ?: " + result);
+                        result = (x > y);
+                        Console.WriteLine("is x greatet than y?: " + result);
+                        result = (x < y);
+                        Console.WriteLine("is y greatet than x?: " + result);
+                        result = (x >= y);
+                        Console.WriteLine("is x greater than or equals y?: "+ result);
+                        result = (x <= y);
+                        Console.WriteLine("is x less than or equals y?: "+ result);
+                        result = (x != y);
+                        Console.WriteLine("is x not equals y? : " + result);
+                    {{'}'}}
+                {{'}'}}
+            {{'}'}}
+            <b>Output:</b>
+                    is x equals y ?: False
+                    is x greatet than y?: True
+                    is y greatet than x?: False
+                    is x greater than or equals y?: True
+                    is x less than or equals y?: False
+                    is x not equals y? : True
+        </code>
+    </pre>
+
+    <h2><b><u>Logical Operators</u></b></h2>
+    <ul>
+        <li>
+            Logical operators are used to varify two or more conditions.
+        </li>
+    </ul>
+    <div style="overflow-x:auto;">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Operator Name</th>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        &&
+                    </td>
+                    <td>
+                        Logical and
+                    </td>
+                    <td>
+                        x < 10 && x < 15 </td>
+                    <td>
+                        Returns true only if both the statements are true
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ||
+                    </td>
+                    <td>
+                        Logical or
+                    </td>
+                    <td>
+                        x < 15 || x < 10 </td>
+                    <td>
+                        Returns true if one of the statements is true
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        !
+                    </td>
+                    <td>
+                        Logical not
+                    </td>
+                    <td>
+                        !(x < 15) </td>
+                    <td>
+                        Returns true if statement is false.
+                    </td>
+                </tr>
+    
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+    
+    <b>
+        Example :-
+    </b>
+
+    <pre style="border-left: 3px solid #def55f;overflow-x: scroll;">
+        <code>
+            using System;
+            namespace IdleProgrammer
+            {{'{'}}
+                class Program
+                {{'{'}}
+                    static void Main(string[] args)
+                    {{'{'}}
+                        bool result;
+                        int x = 10, y = 5;
+                        result =((x == y)&&(x>y));
+                        Console.WriteLine(result);
+                        result =((x == y)||(x>y));
+                        Console.WriteLine(result);
+                        result = !(x > y);
+                        Console.WriteLine(result);
+                    {{'}'}}
+                {{'}'}}
+            {{'}'}}
+            <b>Output:</b>
+                    False
+                    True
+                    True
+        </code>
+    </pre>
+    <h2><b><u>Bitwise Operators</u></b></h2>
+    <ul>
+        <li>
+            Bitwise operatorsare used to perform bit-level operations on Boolean and integer data.
+        </li>
+    </ul>
+    <div style="overflow-x:auto;">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Operator Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        &
+                    </td>
+                    <td>
+                        Bitwise AND
+                    </td>
+                    <td>
+                        It will check each bit of first operand with the second operand if both the bits are 1 then the
+                        result will be 1 otherwise the result will be 0.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        |
+                    </td>
+                    <td>
+                        Bitwise OR
+                    </td>
+                    <td>
+                        It will check each bit of first operand with the second operand if one of them is 1 then the result
+                        will be 1 otherwise 0.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ^
+                    </td>
+                    <td>
+                        Bitwise Exclusive OR (XOR)
+                    </td>
+                    <td>
+                        It will check each bit of the first operand with the corresponding bit of its second operand. If one
+                        bit is 0 and the other bit is 1, then the result bit will be 1 otherwise the result bit will be 0.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ~
+                    </td>
+                    <td>
+                        Bitwise Complement
+                    </td>
+                    <td>
+                        It will check ieach bit of the operand and make it opposite i.e 1 to 0 and 0 to 1.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        << </td>
+                    <td>
+                        Bitwise Left Shift
+                    </td>
+                    <td>
+                        It shifts the number to the left based on the specified number of bits.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        >>
+                    </td>
+                    <td>
+                        Bitwise Right shift operator
+                    </td>
+                    <td>
+                        It shifts the number to the right based on the specified number of bits
+                    </td>
+                </tr>
+    
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+    
+    <b>Example :-</b>
+    <pre style="border-left: 3px solid #def55f;overflow-x: scroll;">
+        <code>
+            using System;
+            namespace Idleprogrammer 
+            {{'{'}}
+                class Program 
+                {{'{'}}
+                    static void Main(string[] args) 
+                    {{'{'}}
+                        int a = 5;            
+                        int b = 4;            
+                        int c; 
+                        c = a & b;        
+                        Console.WriteLine(c);
+                        c = a | b;            
+                        Console.WriteLine(c);
+                        c = a ^ b; 
+                        Console.WriteLine(c);
+                        c = ~a;                
+                        Console.WriteLine(c);
+                        c = a << 2;     
+                        Console.WriteLine(c);
+                        c = a >> 2;     
+                        Console.WriteLine(c);
+                    {{'}'}}
+                {{'}'}}
+            {{'}'}}
+            <b>Output:</b>
+                    4                                                                                                                                      
+                    5                                                                                                                                      
+                    1                                                                                                                                      
+                    -6                                                                                                                                     
+                    20                                                                                                                                     
+                    1      
+        </code>
+    </pre>
+    <h2><b><u>Assignment Operators</u></b></h2>
+    <ul>
+        <li>
+            Assignment operators are used to assign values to the operand.
+        </li>
+    </ul>
+    <div style="overflow-x:auto;">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Operator Name</th>
+                    <th>Example</th>
+                    <th>Same As</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        =
+                    </td>
+                    <td>
+                        Equal to
+                    </td>
+                    <td>
+                        a = 2
+                    </td>
+                    <td>
+                        a = 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        +=
+                    </td>
+                    <td>
+                        Addition Assignment
+                    </td>
+                    <td>
+                        x += 2
+                    </td>
+                    <td>
+                        x = x + 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        -=
+                    </td>
+                    <td>
+                        Subtraction Assignment
+                    </td>
+                    <td>
+                        x -= 2
+                    </td>
+                    <td>
+                        x = x - 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        *=
+                    </td>
+                    <td>
+                        Multiplication Assignment
+                    </td>
+                    <td>
+                        x *= 2
+                    </td>
+                    <td>
+                        x = x * 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        /=
+                    </td>
+                    <td>
+                        Division Assignment
+                    </td>
+                    <td>
+                        x /= 2
+                    </td>
+                    <td>
+                        x = x / 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        %=
+                    </td>
+                    <td>
+                        Modulo Assignment	
+                    </td>
+                    <td>
+                        x %= 2
+                    </td>
+                    <td>
+                        x = x % 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &=
+                    </td>
+                    <td>
+                        Bitwise AND Assignment	
+                    </td>
+                    <td>
+                        x &= 2
+                    </td>
+                    <td>
+                        x = x & 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        |=
+                    </td>
+                    <td>
+                        Bitwise OR Assignment
+                    </td>
+                    <td>
+                        x |= 2
+                    </td>
+                    <td>
+                        x = x | 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ^=
+                    </td>
+                    <td>
+                        Bitwise Exclusive OR Assignment
+                    </td>
+                    <td>
+                        x ^= 2
+                    </td>
+                    <td>
+                        x = x ^ 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        >>=
+                    </td>
+                    <td>
+                        Right Shift Assignment
+                    </td>
+                    <td>
+                        x >>= 2
+                    </td>
+                    <td>
+                        x = x >> 2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <<=
+                    </td>
+                    <td>
+                        Left Shift Assignment
+                    </td>
+                    <td>
+                        x <<= 2
+                    </td>
+                    <td>
+                        x = x << 2
+                    </td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+
+    
+</div>

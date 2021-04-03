@@ -13,5 +13,13 @@ export class OopsComponent implements OnInit {
   ngOnInit(): void {
     this.tittle.setTitle("Oops concept in C#");
   }
+  Previouspage(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    this.router.navigateByUrl('CSharp/array')
+  }
+  Nextpage(){
+   document.body.scrollTop = document.documentElement.scrollTop = 0;
+   this.router.navigateByUrl('CSharp/AbstractAndInterface')
+  }
 
 }

@@ -22,6 +22,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ContactUsComponent } from './Component/User/contact-us/contact-us.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { DatatypesAndVariableComponent } from './Courses/C/datatypes-and-variable/datatypes-and-variable.component';
+import { AbstractInterfaceComponent } from './Courses/CSharp/abstract-interface/abstract-interface.component';
+import { CollageProjectsComponent } from './Component/CollageProjects/collage-projects/collage-projects.component';
+import { OperatorsComponent } from './Courses/CSharp/operators/operators.component';
+import { ConditionalStatementsComponent } from './Courses/CSharp/conditional-statements/conditional-statements.component';
 
 
 
@@ -33,6 +37,10 @@ import { DatatypesAndVariableComponent } from './Courses/C/datatypes-and-variabl
     ContactUsComponent,
     NavigationBarComponent,
     DatatypesAndVariableComponent,
+    AbstractInterfaceComponent,
+    CollageProjectsComponent,
+    OperatorsComponent,
+    ConditionalStatementsComponent,
    
   ],
   imports: [

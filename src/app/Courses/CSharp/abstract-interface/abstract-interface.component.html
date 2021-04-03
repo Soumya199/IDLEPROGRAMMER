@@ -1,0 +1,355 @@
+<div style="margin-left: 15px;margin-right: 15px;font-size: 125%;">
+    <h1 style="text-align: center;color: brown;"><u>Abstract class and Interface in C#</u></h1>
+    <b>
+        <u>Abstract Class in C# :-</u>
+    </b>
+    <ul>
+        <li>
+            Abstract Class is a restricted class and it does not allow you to create its object.
+        </li>
+        <li>
+            An abstract class can contain both abstract and nonabstract methods in it.
+        </li>
+        <li>
+            As Abstract class does not allow you to create an object of it so we can inherit it by the subclass that
+            either implements or override its method.
+        </li>
+        <li>
+            It cannot be sealed
+        </li>
+        <li>
+            It may contain abstract and non-abstract function members
+        </li>
+        <li>
+            It is a part of OOPS
+        </li>
+    </ul>
+    <p>
+        <b>
+            <u>
+                Syntax:
+            </u>
+        </b>
+
+    </p>
+    <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+        <code>
+            abstract class Test
+            {{'{'}}
+                //Your codes here
+            {{'}'}}
+            // class 'Test' is abstract
+        </code>
+    </pre>
+    <p>
+        <b>
+            <u>
+                Example:
+            </u>
+        </b>
+
+    </p>
+    <pre style="border-left: 3px solid #def55f;overflow-x: scroll;">
+        <code>
+            using System.IO;
+            using System;
+
+            abstract class Example
+            {{'{'}}
+                public abstract void First();
+                public void Second()
+                {{'{'}}
+                    Console.WriteLine("I am a non abstract method");
+                {{'}'}}
+            {{'}'}}
+            class Inheritor:Example
+            {{'{'}}
+                public override void First()
+                {{'{'}}
+                    Console.WriteLine("I am an abstract method");
+                {{'}'}}
+            {{'}'}}
+            class Program
+            {{'{'}}
+                static void Main()
+                {{'{'}}
+                    Inheritor obj=new Inheritor();
+                    obj.First();
+                    obj.Second();
+                {{'}'}}
+            {{'}'}}
+
+            <b>Output :-</b>
+            I am an abstract method
+            I am a non abstract method
+        </code>
+    </pre>
+    <p>
+        <b>
+            <u>
+                Interface in C# :-
+            </u>
+        </b>
+    </p>
+    <ul>
+        <li>
+            An interface defines a contract.
+        </li>
+        <li>
+            Interface is a purely abstract class; it has only signatures, no implementation.
+        </li>
+        <li>
+            May contain methods, properties, indexers and events.
+        </li>
+        <li>
+            Interface members are implicitly public abstract (virtual).
+        </li>
+        <li>
+            Interface members must not be static.
+        </li>
+        <li>
+            Classes and structs may implement multiple interfaces.
+        </li>
+        <li>
+            Interfaces can extend other interfaces.
+        </li>
+    </ul>
+    <p>
+        <b>
+            <u>
+                Syntax:
+            </u>
+        </b>
+
+    </p>
+    <pre style="border-left: 3px solid #f2334c;overflow-x: scroll;">
+        <code>
+            interface IBaseClass1
+            {{'{'}}
+                void MethodA();
+            {{'}'}}
+            interface IBaseClass2
+            {{'{'}}
+                void MethodB();
+            {{'}'}}
+            class IMyInterface: IBaseClass1, IBaseClass2
+            {{'{'}}
+                void MethodA()
+                {{'{'}}
+                    //Your Method Defination goes here
+                {{'}'}}
+                void MethodB()
+                {{'{'}}
+                    //Your Method Defination goes here
+                {{'}'}}
+            {{'}'}}
+        </code>
+    </pre>
+    <p>
+        <b>
+            <u>
+                Example:
+            </u>
+        </b>
+
+    </p>
+    <pre style="border-left: 3px solid #ebee3a;overflow-x: scroll;">
+        <code>
+            using System.IO;
+            using System;
+
+            interface IFirst
+            {{'{'}}
+                void First();
+            {{'{'}}
+            interface ISecond
+            {{'{'}}
+                void Second();
+            {{'}'}}
+            class Implementor:IFirst,ISecond
+            {{'{'}}
+                public void First()
+                {{'{'}}
+                    Console.WriteLine("This is from First Interface");
+                {{'}'}}
+                public void Second()
+                {{'{'}}
+                    Console.WriteLine("This is from second Interface");
+                {{'}'}}
+                
+            {{'}'}}
+            class Program
+            {{'{'}}
+                static void Main()
+                {{'{'}}
+                    Implementor obj=new Implementor();
+                    obj.First();
+                    obj.Second();
+                {{'}'}}
+            {{'}'}}
+
+            <b>Output :</b>
+            This is from First Interface
+            This is from second Interface
+        </code>
+    </pre>
+    <b>
+        <u>
+            Difference between Abstract class And Interface :-
+        </u>
+    </b>
+    <br>
+    <br>
+    <table border="1" style="margin-bottom: 50px;">
+        <tr style="background-color: darkgreen;">
+            <th>
+                Abstract Class
+            </th>
+            <th>
+                Interface
+            </th>
+        </tr>
+        <tr>
+            <td>
+                It contains both the declaration and definition parts.
+            </td>
+            <td>
+
+                It contains only a declaration part.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Multiple inheritance is not achieved by an abstract class.
+            </td>
+            <td>
+                Multiple inheritance is achieved by the interface.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                It contains a constructor.
+            </td>
+            <td>
+                It does not contain a constructor.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                It can contain static members.
+            </td>
+            <td>
+                It does not contain static members.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                A class can only use one abstract class.
+            </td>
+            <td>
+
+                A class can use multiple interface.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                An abstract class can contain constants, methods, fields, etc.
+            </td>
+            <td>
+
+                The interface can only contain methods.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                It can be fully, partially, or not implemented.
+            </td>
+            <td>
+
+                It should be fully implemented.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                t can contain access modifiers like public, private, protected, etc.
+            </td>
+            <td>
+                It contains only public access modifier because everything in the interface is public.
+            </td>
+        </tr>
+    </table>
+
+    <h1>
+        <b><u>How to Implement Multiple Interfaces Having Same Method Name in C#</u></b>
+    </h1>
+    <p>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+        <b>This is a question that often asked in interviews.
+        </b><br>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+        <b>Let us consider an example and learn how to do that.
+        </b><br>
+    </p>
+    <p>
+        <b>
+            <u>
+                Example:
+            </u>
+        </b>
+
+    </p>
+    <pre style="border-left: 3px solid #2521e4;overflow-x: scroll;">
+        <code>
+            using System.IO;
+            using System;
+
+            public interface ISame1
+            {{'{'}}
+                void Print();
+            {{'}'}}
+            public interface ISame2
+            {{'{'}}
+                void Print();
+            {{'}'}}
+
+            class Program : ISame1, ISame2
+            {{'{'}}
+                void ISame1.Print()
+                {{'{'}}
+
+                    Console.WriteLine("Print method from ISame1");
+                {{'}'}}
+                void ISame2.Print()
+                {{'{'}}
+
+                    Console.WriteLine("Print method from ISame2");
+                {{'}'}}
+                static void Main()
+                {{'{'}}
+                    Program p = new Program();
+                    ((ISame1)p).Print();
+                    ((ISame2)p).Print();
+                {{'}'}}
+            {{'}'}}
+
+            <b>Output :</b>
+            Print method from ISame1
+            Print method from ISame2
+        </code>
+    </pre>
+    <ul>
+        <li>
+            First, we are creating two interfaces with name ISame1 & ISame2, both of two contains the same method named
+            as
+            Print method.
+        </li>
+        <li>
+            Now we have to implement these two interfaces and its methods but the problem is compiler will get confused
+            which method to call as both the methods are having same name.
+        </li>
+        <li>
+            For that, we prefix the method using the interface name and a dot operator, and at the time of calling that
+            the method we are typecasting it so that we can call the correct method.
+        </li>
+    </ul>
+</div>

@@ -28,6 +28,9 @@ import { ContactUsComponent } from './Component/User/contact-us/contact-us.compo
 import { PageNotFoundComponent } from './Component/Webinfo/page-not-found/page-not-found.component';
 import { FirstCProgramComponent } from './Courses/C/first-cprogram/first-cprogram.component';
 import { DatatypesAndVariableComponent } from './Courses/C/datatypes-and-variable/datatypes-and-variable.component';
+import { AbstractInterfaceComponent } from './Courses/CSharp/abstract-interface/abstract-interface.component';
+import { CollageProjectsComponent } from './Component/CollageProjects/collage-projects/collage-projects.component';
+import { OperatorsComponent } from './Courses/CSharp/operators/operators.component';
 
 
 const routes: Routes = [
@@ -43,6 +46,7 @@ const routes: Routes = [
   { path: 'disclaimer', component: DisclaimerComponent },
   {path:'contactUs',component:ContactUsComponent,canActivate: [AuthGuard]},
   {path:'404PageNotFound',component:PageNotFoundComponent},
+  {path:'CollageProjects',component:CollageProjectsComponent},
   // This section will deal with c Course
 
   {path:'C/intoductionToc',component:IntoductionToCComponent},
@@ -61,6 +65,8 @@ const routes: Routes = [
   {path:'CSharp/nullable',component:NullableComponent},
   {path:'CSharp/convertClass',component:ConvertClassComponent},
   {path:'CSharp/VarVsDynamic',component:VarVsDynamicComponent},
+  {path:'CSharp/AbstractAndInterface',component:AbstractInterfaceComponent},
+  {path:'CSharp/Operators',component:OperatorsComponent},
   // This section will deal with C Sharp Course
 
   // This section will deal with Articles
@@ -81,18 +87,18 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const Myrouter=[HomeComponent,ContactUsComponent,LogInComponent,PrivecyPolicyComponent,RegisterComponent,ACRecoveryComponent,AboutUSComponent,
-  HCJBCOMPILERComponent,OnlineCompilersComponent,
+  HCJBCOMPILERComponent,OnlineCompilersComponent,CollageProjectsComponent,
   // This section will deal with c Course
 
   IntoductionToCComponent,EnvirnmentsetupComponent,FirstCProgramComponent,
 
-// This section will deal with c Course
+  // This section will deal with c Course
 
- // This section will deal with Articles
- AiComponent,CreateFileInCSharpComponent,WhyCSharpComponent,TopProgramminglaguageComponent,
+  // This section will deal with Articles
+   AiComponent,CreateFileInCSharpComponent,WhyCSharpComponent,TopProgramminglaguageComponent,
   // This section will deal with Articles
 
   // This section will deal with C Sharp Course
-  CSharpIntroductionComponent,VarVsDynamicComponent,ConvertClassComponent,NullableComponent,
-  CSharpDataTypesComponent,CSharpEnvirnmentSetUpComponent,ArrayInCSharpComponent,OopsComponent];
+  CSharpIntroductionComponent,VarVsDynamicComponent,ConvertClassComponent,NullableComponent,AbstractInterfaceComponent,
+  CSharpDataTypesComponent,CSharpEnvirnmentSetUpComponent,ArrayInCSharpComponent,OopsComponent,OperatorsComponent];
   // This section will deal with C Sharp Course
